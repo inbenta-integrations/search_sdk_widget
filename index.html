@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbenta Search Widget</title>
+    <script src="./src/js/sdk-widget.js"></script>
+    <link rel="stylesheet" type="text/css" href="./src/styles/sdk-widget.css">
+    <link rel="icon" href="https://www.inbenta.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <script>
+        createInbentaSearchSDKWidget(
+            "1.22.0", // SDK version
+            /*
+            Subresouce Integrity: Optional (use null to skip check)
+            See https://developers.inbenta.io/search/javascript-sdk/sdk-subresource-integrity
+            */
+            "sha384-ifuG86EAWx0kUeqJZTJxHpdJDFlKrXW0JcaBz2UsA5hdIXbvM9OmBQt6I98payUv",
+            "<Domain key>", // Domain key
+            "<API key>", // API key
+            {
+                environment: "development"
+            }, // SDK configuration
+            {
+                refinementTabs: {
+                    attributeName: "<ATTRIBUTE_NAME>",
+                },
+                refinementLists: {
+                    refinements: [
+                        { attributeName: "<ATTRIBUTE_NAME>" },
+                    ]
+                },
+                pagination: {
+                    padding: 1,
+                },
+                searchBox: {
+                    autocompleter: {
+                        showViewAllButton: false,
+                    },
+                },
+            } //Components configuration
+        );
+    </script>
+</body>
+</html>
