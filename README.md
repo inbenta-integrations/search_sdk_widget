@@ -87,3 +87,4 @@ In order to show properly the widget into mobile devices we recommend to add the
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
+## IMINA TESTING
