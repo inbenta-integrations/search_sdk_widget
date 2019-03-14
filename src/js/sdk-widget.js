@@ -218,10 +218,11 @@ const createInbentaSearchSDKWidget = function (sdkVersion, sri, domainKey, apiKe
 
         // Create the actions.
         const close = function() {
-            launcher.style.display = "none";
-            widget.style.display = "none";
-            document.body.classList.remove("inbenta-search-widget--open");
+            minimize();
+            var previousWrapper = document.querySelector(".inbenta-search-widget-wrapper");
+            previousWrapper.parentNode.removeChild(previousWrapper);
             removeWidgetStorage();
+            initWidget();
         };
         const minimize = function() {
             launcher.style.display = '';
