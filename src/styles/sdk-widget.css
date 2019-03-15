@@ -155,6 +155,7 @@
 .inbenta-search-widget .inbenta-search .inbenta-search-box .inbenta-search-button{
     height: 40px;
     width: 40px;
+    padding: 0;
 }
 .inbenta-search-widget .inbenta-search .inbenta-search-box .inbenta-search-button:before{
     font-size: 18px;
@@ -244,7 +245,7 @@
     padding: 0;
 }
 .inbenta-search-widget .inbenta-search .inbenta-search-results .inbenta-search-results__item .item__link{
-	text-transform: initial;
+	text-transform: none;
     color: #3D3F43;
     padding-bottom:8px;
 }
@@ -513,7 +514,9 @@
     opacity: 1;
     pointer-events: auto;
 }
-
+.inbenta-search-widget-autocompleter-show .inbenta-search-widget__container{
+    height: 484px
+}
 /*POWERED*/
 .inbenta-search-widget .inbenta-search-powered{
     padding:8px 0 0 0;   
