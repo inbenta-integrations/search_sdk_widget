@@ -289,9 +289,14 @@ const createInbentaSearchSDKWidget = function (sdkVersion, sri, domainKey, apiKe
                 .concat(searchStore.getFacets("or"))
                 .filter(function(attributeName) { return attributeName !== refinementTabs.attributeName; })
                 .some(function(attributeName) { return searchStore.hasFacetRefinement(attributeName); });
-            sdkContainer.querySelector(".inbenta-search-refinement-bar__filter")
-                .classList.toggle("inbenta-search-refinement-bar__filter--active", hasRefinements);
 
+            const classList = sdkContainer.querySelector(".inbenta-search-refinement-bar__filter").classList;
+            const activeClass = "inbenta-search-refinement-bar__filter--active";
+            if (hasRefinements) {
+                classList.add(activeClass);
+            } else {
+                classList.remove(activeClass);
+            }
         });
 
         // Add event listeners.
